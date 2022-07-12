@@ -79,6 +79,7 @@
   margin: auto;
   margin-bottom: 2em;
   position: relative;
+  overflow: hidden;
 }
 .mountain{width: 100%;}
 .bus{width: 30%; position: absolute; bottom: -10%; right: -20%; animation-name: moveBus; animation-duration: 5s; animation-iteration-count: 2;
