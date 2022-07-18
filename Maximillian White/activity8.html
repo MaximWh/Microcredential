@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Activity 8 - Maximillian White</title>
+  </head>
+  <body>
+    <h1>Activty 8 - Maximillian White</h1>
+    <script type="text/javascript">
+
+      function checkName(){
+      let name = prompt("Enter name: ")
+      while (name !== 'number' || typeof name !== 'string'){
+        if (isNaN(name) == false) {
+          name = prompt(`${name} is invalid. Enter a name again: `)
+        }
+         else if(name == null){
+          name = prompt(`You forgot to enter a name. Enter a name again: `)
+        }
+        else {
+          name = name.toUpperCase()
+          console.log(`Welcome to the program ${name}`)
+          break
+        }
+      }
+      }
+      </script>
+  </body>
+</html>
