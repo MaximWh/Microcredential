@@ -43,11 +43,11 @@ inputTxt.addEventListener('keydown', function(e){
   alert(`KEYDOWN! key "${e.key}" was pressed \nThe ASCII code for key "${e.key}" is ${e.which}`)
 })
 // EXAMPLE 9
-const divColor = document.querySelector('.divColor')
+const divColor = document.querySelectorAll('.divColor')
 for(let eachDiv of divColor){
   eachDiv.addEventListener('mouseout', function(){
-    eachDiv.style.backgroundColor = changeColor();
-})
+    eachDiv.style.backgroundColor = changeColor()
+  })
 }
 // EXAMPLE 7
 const colorContainer = document.querySelector('.colorContainer')
@@ -85,7 +85,7 @@ btn5.addEventListener('click', function(){
 // EXAMPLE 4
 const title = document.querySelector('.title')
 title.onmouseout= function(){
-  console.log('The title was hovered on mouseout event');\
+  console.log('The title was hovered on mouseout event');
 }
 // EXAMPLE 3
 const qccLink = document.querySelector('#qccLink')
@@ -100,7 +100,7 @@ function testing(){
 }
 // EXAMPLE 2
 const btn2 = document.querySelector('#btn2')
-btn.onclick = function(){
+btn2.onclick = function(){
   alert('Hi there!')
 }
 /* another way to create the event
