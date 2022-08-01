@@ -40,7 +40,7 @@
         console.log(dice())
       }
       function rolldice(){
-        const roll = (Math.random()*6)+1
+        const roll = Math.floor(Math.random()*6)+1
         return roll
       }
 
@@ -55,12 +55,6 @@
       const myMath ={
         square (num){return num*num},
         double (num){return num*2}
-      }
-
-      // example 6.b)
-      const myMath = {
-        square:function (num){return num*num}),
-        double:function(num){return num+num}
       }
 
       //Example 7) define an object called square, which will hold methods area and perimeter
