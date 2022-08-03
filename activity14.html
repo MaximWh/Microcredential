@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Activtity 14 - Maximillian White</title>
+    <style media="screen">
+      .changeBG{background-color: orange;}
+      .circle{background-color: purple; height: 200px; width: 200px; border-radius:
+      50%; padding: 3em; text-align: center;}
+/*-- ACTIVITY 14 --*/
+      .circle2{background-color: red;height: 200px; width: 200px; border-radius:
+      50%; padding: 3em; text-align: center;}
+      .square{background-color: lightblue; height: 200px; width: 200px; border: 10px; padding: 3em; text-align: center;}
+    </style>
+  </head>
+  <body>
+  <h1>Activity 14 - Maximillian White</h1>
+  <button onclick="alert('You clicked me!')">CLICK ME!</button>
+  <div class="circle" id='circle'>
+   Mouse over to see the hover event. Also try to double-click
+  </div>
+  <!-- ACTIVITY 14 -->
+    <div class="circle2" id='circle2'>
+   Touch Me!
+  </div>
+  <div class="square" id='square'>
+   Click Me!
+  </div>
+
+<script src=" https://code.jquery.com/jquery-3.6.0.js "></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+  // ACTIVITY 14
+  function changeColor(){
+    const r = Math.floor(Math.random()*256)
+    const g = Math.floor(Math.random()*256)
+    const b = Math.floor(Math.random()*256)
+    return rgb = `rgb(${r},${g},${b})`
+  }
+  $(function(){
+   $('#circle2').on('mouseleave',mouseEffect);
+   count = 0
+function mouseEffect(){
+  count ++
+$('#circle2').css('background-color',changeColor())
+$('#circle2').html('<h3>The mouse leaves the circle '+count+ ' times</h3>')
+console.log(changeColor());
+  }
+})
+
+  $(function(){
+   $('#square').on('click',mouseEffect);
+   squarecount = 0
+  function mouseEffect(){
+  squarecount ++
+  $('#square').css('background-color',changeColor())
+  $('#square').html('<h3>The square was clicked '+ squarecount+ ' times</h3>')
+  console.log(changeColor());
+  }
+})
+
+  $(function(){
+   $('#circle').hover(hoverCircle);
+   $('#circle').dblclick(fnDoubleClick);
+   $(window).resize(fnResize);
+  });
+  function hoverCircle(){
+   $('#circle').toggleClass('changeBG')
+   $('#circle').html('<h3>hover event</h3>')
+}
+function fnDoubleClick(){
+ $('#circle').html('<h3>Double-clicked!</h3>')
+}
+function fnResize(){
+ $('#circle').html('<h3>Window was resize!</h3>')
+}
+})
+</script>
+  </body>
+</html>
