@@ -35,4 +35,4 @@ rollAmount = int(input("How many times do you want to roll? "))
 for x in range(1, rollAmount + 1):
     rollResults = random.randint(1,6)
     print("Roll %s = %s" %(x, rollResults))
-
+print("\n ------------ End ------------ ")
